@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berhasil!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <style>
+        #bag-landing {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(#213448, #0a263c); */
+            background: linear-gradient(rgb(203, 229, 252), #dbdddf);
+
+        }
+
+        img {
+            opacity: 0;
+            transform: translateX(0);
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: fadeIn(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bag-landing">
+        <div class="rounded-4 shadow w-50 p-5 text-center" style="background-color: aliceblue;">
+            <h2>Pesanan Berhasil!</h2>
+            <img src="assets/check.png" width="90" class="mb-4 mt-2">
+            <p style="font-size: 15px;">Terima kasih telah melakukan pembelian. <br>
+                Pesanan Anda sedang kami proses dan akan segera dikirim. <br>
+                Silakan cek email atau nomor telepon Anda untuk informasi selanjutnya.</p>
+            <a href="index.html" class="btn btn-secondary mt-4 w-50">Kembali ke halaman utama</a>
+        </div>
+    </div>
+</body>
+
+</html>
