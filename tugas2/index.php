@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apotek Khusnul</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <?php
+    $navItem = ["home", "kelebihan", "kategori", "contact", "profile"];
+    $kelebihan = ["Pilihan produk yang lengkap", "Harga terjangkau", "Beragam metode pembayaran", "Bisa tebus resep dokter", "Konsultasi apoteker gratis"];
+    $cardText = ["Obat", "Suplemen", "Alat Kesehatan", "Vitamin", "Kecantikan", "Produk Bayi", "Feminine Care", "Makanan & Minuman"];
+    $cardImgMdl = ["obat", "suplemen", "healtht", "vitamin", "bodyc", "baby", "fcare", "yakult"];
+  ?>
+  <nav class="navbar navbar-expand-lg" style="background-color: #092452;color: white;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/logo.png" width="35">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <?php 
+          foreach ($navItem as $v) { 
+            $href = $v == "profile" ? "profile.php" : "#".$v;
+            echo '<li class="nav-item">
+              <a class="nav-link" href="'.$href.'">'.ucwords($v).'</a>
+            </li>';
+           } ?>
+        </ul>
+        <div class="d-flex">
+          <label style="color: #ffffbb;"><?= date('d F Y H:i:s'); ?></label>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="home">
+    <div class="bag-home">
+      <h1>Apotek Khusnul</h1>
+      <label>Website apotik online yang menyediakan obat-obatan ethical maupun OTC, jual obat online, alat kesehatan,
+        dan juga obat resep dokter.
+        Kami berkomitmen untuk memberikan kemudahan bagi para pelanggan untuk mendapatkan produk yang berkualitas, asli,
+        serta kenyamanan dengan pengiriman langsung ke rumah Anda.</label>
+      <div class="count d-flex align-items-center gap-5 mt-4">
+        <div><img src="assets/users.png" width="50"><strong> 5000+ </strong>
+          <p>Produk tersedia</p>
+        </div>
+        <div><img src="assets/lokasi.png" width="50"><strong> 10+ </strong>
+          <p>Jangkauan kota</p>
+        </div>
+
+      </div>
+      <a href="form.html" class="btn btn-light btn-lg mt-4 px-4 btn-outline-primary btn-beli">Beli sekarang</a>
+    </div>
+
+    <div class="img-hai">
+      <img src="assets/pharm.png" width="420">
+    </div>
+  </section>
+  <section id="kelebihan">
+    <div class="img-kurir">
+      <img src="./assets/jempol.png" width="450">
+    </div>
+    <div class="txt-kelebihan">
+      <h2>Belanja Produk</h2>
+      <h5 class="mb-3"><i>Marketplace</i> khusus produk kesehatan</h5>
+      <p>Temukan kemudahan akses ke lebih dari 5.000 produk kesehatan, mulai dari
+        obat-obatan, vitamin, suplemen, hingga peralatan medis. Nikmati fitur-fitur unggulan seperti konsultasi online
+        dengan apoteker dan layanan antar cepat langsung ke rumah Anda.</p>
+        <?php
+        foreach ($kelebihan as $k) {
+          echo '<div class="mt-1">
+                  <img src="assets/check.png" width="20"> '.$k.'
+                </div>';
+        }
+        ?>
+        
+    </div>
+
+  </section>
+  <section id="kategori">
+    <div class="container">
+      <h3>Kategori Produk</h3>
+      <div class="grid-produk">
+        <?php for ($i=0; $i < count($cardText); $i++) { ?>
+            <div class="card card-body" data-bs-toggle="modal" data-bs-target="#modal<?= $cardImgMdl[$i]?>">
+              <img src="./assets/<?= $cardImgMdl[$i]?>.jpg" alt="">
+              <?= $cardText[$i] ?>
+            </div>
+        <?php  } ?>
+      </div>
+    </div>
+  </section>
+</body>
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-detail">
+        <h3>Contact Us</h3>
+        <p>
+          Sleman, Yogyakarta<br>
+          Ngemplak, 55584
+        </p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:+6281228478987">+62 812 2847 8987</a><br>
+          <strong>Email:</strong> <a href="mailto:124250052@student.upnyk.ac.id">124250052@student.upnyk.ac.id</a>
+        </p>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1865.1455427276105!2d110.41388020946924!3d-7.781713391197085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599155555555%3A0x536eb168b1dca148!2sUniversitas%20Pembangunan%20Nasional%20%22Veteran%22%20Yogyakarta%20-%20Kampus%202%20Babarsari!5e0!3m2!1sid!2sid!4v1772678676678!5m2!1sid!2sid"
+          allowfullscreen="" loading="lazy" aria-label="Google map showing location of our cafe">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p class="m-0">&copy; 2026 Apotek Khusnul. All Rights Reserved.</p>
+      <nav class="footer-sosmed" aria-label="Social media">
+        <ul>
+          <li><a href="#" aria-label="Our Facebook Page"><svg role="img" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Facebook</title>
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+              </svg></a></li>
+          <li><a href="https://www.instagram.com/khusnuluswatun_" target="_blank">
+              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.297-1.459.717-2.126 1.384S.926 3.356.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.297.784.717 1.459 1.384 2.126.667.666 1.342 1.089 2.126 1.384.766.296 1.636.499 2.913.558C8.333 
+                23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.784-.297 1.459-.718 2.126-1.384.666-.667 1.089-1.342 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.148-.558-2.913-.297-.784-.718-1.459-1.384-2.126C21.3141.64 20.64 1.217 
+                19.856.92c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.056 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 
+                1.382-.42.419-.819.679-1.381.896-.422.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.585-.015-4.85-.074c-1.17-.056-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.585.074-4.85c.056-1.17.249-1.805.413-2.227.217.562.477.96.896-1.382.42-.419.819.679 
+                1.381-.896.422-.164 1.057.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
+              </svg></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- modal detail produk -->
+<div class="modal fade" id="modalobat" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Obat</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1.</td>
+            <td>Paracetamol</td>
+            <td>Rp10.000</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Combivent</td>
+            <td>Rp29.000</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Acetaminophen</td>
+            <td>Rp32.000</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Amoxicillin</td>
+            <td>Rp25.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalsuplemen" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Suplemen</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Blackmores Multivitamin</td>
+            <td>Rp150.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Imboost Force</td>
+            <td>Rp85.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Enervon C</td>
+            <td>Rp25.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalhealtht" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Alat Kesehatan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Omron Tensimeter</td>
+            <td>Rp350.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Thermometer Digital</td>
+            <td>Rp45.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Nebulizer Omron</td>
+            <td>Rp420.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalvitamin" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Vitamin</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Vitacimin</td>
+            <td>Rp18.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Vitamin C IPI</td>
+            <td>Rp20.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Vitamin B Complex</td>
+            <td>Rp30.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalbodyc" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Produk Kecantikan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Wardah Facial Wash</td>
+            <td>Rp28.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Garnier Micellar Water</td>
+            <td>Rp35.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Scarlett Brightening Serum</td>
+            <td>Rp75.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalbaby" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Peralatan Bayi</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Zwitsal Baby Shampoo</td>
+            <td>Rp22.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Johnson's Baby Lotion</td>
+            <td>Rp30.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Pampers Popok Bayi</td>
+            <td>Rp95.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalfcare" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Feminine Care</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Softex Daun Sirih</td>
+            <td>Rp18.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Laurier Super Slimguard</td>
+            <td>Rp20.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalyakult" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 fw-semibold">Daftar Makanan & Minuman</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>No.</th>
+            <th>Merk</th>
+            <th>Harga</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Yakult</td>
+            <td>Rp11.000</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bear Brand Milk</td>
+            <td>Rp12.000</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sari Roti Coklat</td>
+            <td>Rp7.000</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Penulis</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <?php
+        $data = array(
+            "nama"  => "Khusnul Uswatun Khasanah",
+            "nim"   => "124250052",
+            "plug"  => "SI-C",
+            "funfact" => "Lolos utbk tanpa bimbel :D"
+        );
+    ?>
+    <div id="bag-luar-profile" class="d-flex justify-content-center align-items-center">
+        <div class="rounded-4 shadow w-50 p-4 text-center bag-profile">
+            <img src="assets/khusnul.jpg" class="img-profile" width="140">
+            <table class="table" style="text-align: left;">
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td><?= $data['nama']?></td>
+                </tr>
+                <tr>
+                    <td>NIM</td>
+                    <td>:</td>
+                    <td><?= $data['nim']?></td>
+                </tr>
+                <tr>
+                    <td>Plug</td>
+                    <td>:</td>
+                    <td><?= $data['plug']?></td>
+                </tr>
+                <tr>
+                    <td>Fun Fact</td>
+                    <td>:</td>
+                    <td><?= $data['funfact']?></td>
+                </tr>
+            </table>
+
+            <a href="index.php" class="btn btn-secondary m-3">Kembali ke halaman utama</a>
+        </div>
+    </div>
+</body>
+
+</html>
