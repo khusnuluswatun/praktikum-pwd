@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+}
+
+.bag-story {
+    border: 1.5px solid #4d4c59;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.534);
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: #d2c29e;
+    padding: 50px 25px;
+    font-family: 'MedievalSharp';
+}
+
+.bag-story h1 {
+    font-size: 55px;
+    font-family: 'Cinzel Decorative';
+    font-weight: bold;
+}
+
+.bag-story p {
+    font-size: 13px;
+    font-style: italic;
+    margin: 25px 0;
+    line-height: 1.5rem;
+    word-spacing: 25%;
+    color: #beb6a3;
+
+}
+
+.btn-mulaip {
+    color: #e5dbc3;
+    background-color: #5b4a42;
+}
+
+.btn-mulaip:hover {
+    background-color: rgb(102, 94, 72);
+}
+
+
+/* form.html */
+.bag-form {
+    width: 65%;
+    font-family: 'MedievalSharp';
+    background-color: antiquewhite;
+    color: rgb(93, 82, 63);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(93, 82, 63);
+}
+
+.bag-form h2 {
+    font-weight: 600;
+    font-family: 'Cinzel Decorative';
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    border: 1px solid rgb(180, 166, 144);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.bag-form label {
+    font-weight: bold;
+    /* margin-bottom: 4px; */
+}
+
+.bag-form .col,
+.bag-form .row {
+    margin-top: 17px;
+}
+
+.bag-form button {
+    border: none;
+    background: none;
+}
+
+.bag-btnSeal {
+    text-align: -webkit-right;
+}
+
+.bag-btnSeal:hover button {
+    transform: scale(1.05);
+}
+
+
+
+/* biography.php */
+h1,
+h2 {
+    text-transform: uppercase;
+    font-family: 'Cinzel Decorative';
+}
+
+.biography img {
+    width: 90px;
+    border-radius: 50px;
+    border: 2px solid rgb(93, 82, 63);
+}
+
+.bag-imgb img {
+    width: 75px;
+    margin: 0 5px;
+}
+
+.c8bio {
+    border-left: 2px solid rgb(93, 82, 63);
+}
+
+.row.biography {
+    min-height: 100vh;
+}
+
+.btn-custom {
+    background: #6b5a45;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-custom:hover {
+    color: white;
+    background: #957e62;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+/* question.php */
+.bag-chapter {
+    background-color: #f4e7d4;
+    text-align: center;
+    border-radius: 12px;
+    width: 75%;
+    color: #53412b;
+}
+
+.bag-chapter h1 {
+    text-transform: uppercase;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.img-mentor {
+    width: 145px;
+    float: right;
+    border-radius: 12px;
+}
+
+.img-hall {
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(70, 63, 63, 0.76);
+}
+
+.cerita {
+    text-align: justify;
+}
+
+.bag-chapter input {
+    border: 1px solid #6b5a45;
+}
+
+
+/* result.php */
+.bag-result {
+    background-color: #f4e7d4;
+    text-align: center;
+    border-radius: 12px;
+    color: #6b5a45;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.534);
+}
+
+.img-scrl {
+    width: 130px;
+}
+
+.btn-bkertas {
+    color: #6b5a45;
+    border: 1.5px solid #6b5a45;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-bkertas:hover {
+    background-color: #d5b48e;
+}
+
+.bag-loop {
+    box-shadow: 0 0 6px rgba(62, 49, 49, 0.658);
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: auto;
+    background-color: rgb(249, 240, 221);
+}
