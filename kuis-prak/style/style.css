@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    font-family: 'Special Elite';
+}
+
+.kuning {
+    color: rgb(186, 186, 27);
+}
+
+#bag-idx h5 {
+    font-family: 'Special Elite';
+    font-size: 10px;
+}
+
+#bag-idx h1 {
+    font-family: 'Playfair Display';
+    font-style: italic;
+}
+
+#bag-idx p {
+    font-family: 'Special Elite';
+    font-size: 10px;
+}
+
+.bag-sc {
+    height: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.bag-sc a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.bgbg input[type="text"],
+.bgbg select {
+    width: 80%;
+    height: 25px;
+}
+
+.khusus {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-weight: bold;
+}
+
+.atas-img {
+    padding: 5px;
+    border: 1px solid rgb(180, 98, 17);
+    width: 50%;
+}
+
+.oren {
+    color: rgb(180, 98, 17);
+}
